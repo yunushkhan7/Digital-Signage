@@ -1,0 +1,33 @@
+<div class="w-100 h-100">
+  <img  class="animate__animated animate__fadeIn"
+   *ngIf="data?.FaceGroup > 1"
+    src="./assets/screens/group entry 1920x1080px.jpg"
+    alt=""/>
+
+  <img class="animate__animated animate__fadeIn"
+    *ngIf="data?.Type == 'Match'"
+    src="./assets/screens/VIP EARLY ACCESS 1920x1080px.jpg"
+    alt=""
+  />
+
+  <img class="animate__animated animate__fadeIn"
+    *ngIf="data?.Gender == 'Male' && data?.Type=='NoMatch'"
+    src="./assets/screens/men 1920x1080px.jpg"
+    alt=""
+  />
+
+  <img class="animate__animated animate__fadeIn"
+    *ngIf="data?.Gender == 'Female' && data?.Type=='NoMatch'"
+    src="./assets/screens/girl 1920x1080px.jpg"
+    alt=""
+  />
+
+  <div class="position_rel" *ngIf="data == undefined">
+    <img class="animate__animated animate__fadeIn"
+      src="./assets/screens/Default Screen 1920x1080px.jpg"
+      alt=""
+    />
+    <span class="date_time">{{ currentDateTime | date : "dd-MM-yyyy hh:mm:ss a" }}</span>
+  </div>
+
+</div>

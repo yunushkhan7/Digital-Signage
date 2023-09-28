@@ -1,0 +1,94 @@
+<div class="side-bar">
+
+  <ul>
+    <li *ngFor="let item of top5ListItems">
+      <div class="profile-img">
+        <img [src]="'data:image/png;base64,'+item?.Image">
+      </div>
+      <div>
+        <h4>{{item?.Name}}</h4>
+        <p>
+          Age : {{item?.Age}}<br />
+          {{item?.CreatedAt | date:'dd-MM-yyy hh:mm:ss a'}}
+        </p>
+      </div>
+      <div *ngIf="item?.Gender === 'Male' || item?.Gender === 'Group' " class="icon-m">
+        <i class="fa fa-venus" aria-hidden="true"></i>
+      </div>
+      <div *ngIf="item?.Gender === 'Female'" class="icon-f">
+        <i class="fa fa-mars" aria-hidden="true"></i>
+      </div>
+    </li>
+
+    <!-- <li>
+            <div class="profile-img">
+                <img src="assets/img/profile-img1.jpg">
+            </div>
+            <div>
+                <h4>Name</h4>
+                <p>
+                    Age : 32<br />
+                    19-07-2023 / 16:31:14
+                </p>
+            </div>
+            <div class="icon-f">
+                <i class="fa fa-venus" aria-hidden="true"></i>
+            </div>
+        </li>
+
+        <li>
+            <div class="profile-img">
+                <img src="assets/img/profile-img2.jpg">
+            </div>
+            <div>
+                <h4>Richard Tong</h4>
+                <p>
+                    Age : 32<br />
+                    19-07-2023 / 16:31:14
+                </p>
+            </div>
+            <div class="icon-m">
+                <i class="fa fa-mars" aria-hidden="true"></i>
+            </div>
+        </li>
+
+
+        <li>
+            <div class="profile-img">
+                <img src="assets/img/profile-img1.jpg">
+            </div>
+            <div>
+                <h4>Name</h4>
+                <p>
+                    Age : 32<br />
+                    19-07-2023 / 16:31:14
+                </p>
+            </div>
+            <div class="icon-f">
+                <i class="fa fa-venus" aria-hidden="true"></i>
+            </div>
+        </li>
+
+        <li>
+            <div class="profile-img">
+                <img src="assets/img/profile-img2.jpg">
+            </div>
+            <div>
+                <h4>Richard Tong</h4>
+                <p>
+                    Age : 32<br />
+                    19-07-2023 / 16:31:14
+                </p>
+            </div>
+            <div class="icon-m">
+                <i class="fa fa-mars" aria-hidden="true"></i>
+            </div>
+        </li> -->
+
+
+  </ul>
+
+  <!-- <div class="video-img">
+    <img src="assets/img/Office-room.png">
+  </div> -->
+</div>

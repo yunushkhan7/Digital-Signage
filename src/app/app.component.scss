@@ -1,0 +1,57 @@
+// .dropdown{
+//     z-index: 2;
+//     position: absolute;
+//     right: 12px;
+//     top: 12px;
+// }
+
+
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right:-250px;
+    background-color: #ffffff;
+    width: 250px;
+    height: 100%;
+    transition: .3s;
+    z-index: 9;
+  }
+
+
+
+  .sidebarBtn{
+    box-sizing:border-box;
+      cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 25px 0px 0px 25px;
+    outline: none;
+    color: #000;
+    position: absolute;
+    top: 30%;
+    left: -30px;
+    background: #fff;
+    height: 17vw;
+    width: 30px;
+    box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.03);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .sidebarBtn span{
+    transform: rotate(-90deg);
+    padding: 0px;
+    // width: 11vw;
+    font-size: 1.5vw;
+  }
+  .active{
+    right: 0;
+  }
+
+  .sidebarBtn.toggle span{
+    background-color: transparent;
+  }
+
+
+
